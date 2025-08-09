@@ -2,86 +2,77 @@
 
 A Discord bot for VaultVerse to manage custom roles and commands.
 
-## Features
-- Assign and remove custom roles with slash commands
-- Role-based access control for specific channels
-- Automatic role management for events or boosters
-- Simple configuration via `.env` file
+## 📌 Features
+- Assign custom roles to members.
+- Remove roles when conditions are not met.
+- Deploy slash commands automatically.
+- Check token validity before running.
 
 ---
 
-## Installation
+## 📦 Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/wiqilee/vaultverse-rolebot.git
-   cd vaultverse-rolebot
-   ```
+### 1. Clone the repository
+```bash
+git clone https://github.com/wiqilee/vaultverse-rolebot.git
+cd vaultverse-rolebot
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+### 2. Install dependencies
+Make sure you have [Node.js](https://nodejs.org/) installed (version 16 or above).
+```bash
+npm install
+```
 
-3. **Create a `.env` file** in the project root and add your bot token:
-   ```env
-   TOKEN=YOUR_DISCORD_BOT_TOKEN
-   CLIENT_ID=YOUR_DISCORD_CLIENT_ID
-   GUILD_ID=YOUR_DISCORD_GUILD_ID
-   ```
-
-4. **Make sure `.env` is listed in `.gitignore`** so it won’t be uploaded to GitHub.
+### 3. Create `.env` file
+Create a `.env` file in the root folder and add the following variables:
+```env
+DISCORD_TOKEN=your-bot-token-here
+CLIENT_ID=your-discord-client-id
+GUILD_ID=your-discord-server-id
+```
 
 ---
 
-## Usage
+## ▶️ Usage
 
-### Deploy Commands
-Before starting the bot, deploy your slash commands:
+### 1. Deploy commands to Discord
+Run this once after adding or changing commands:
 ```bash
 node deploy-commands.js
 ```
 
-### Run the Bot
+### 2. Start the bot
 ```bash
 node index.js
 ```
 
-If successful, you’ll see:
-```
-Bot online as VaultVerse#XXXX
-```
-
----
-
-## File Structure
-```
-vaultverse-rolebot/
-│
-├── .gitignore              # Files ignored by Git
-├── .env                    # Environment variables (not uploaded to GitHub)
-├── package.json            # Project metadata & dependencies
-├── package-lock.json
-├── deploy-commands.js      # Script to register slash commands
-├── index.js                # Main bot file
-├── check-token.js          # Token validation script
-└── node_modules/           # Installed dependencies
+### 3. Check token validity
+(Optional) You can check whether your token is valid:
+```bash
+node check-token.js
 ```
 
 ---
 
-## Example Commands
-- `/addrole @username RoleName` → Assign a role to a user
-- `/removerole @username RoleName` → Remove a role from a user
-- `/listroles` → Show all available roles
+## 🛡️ .gitignore
+This project uses `.gitignore` to ensure sensitive files are not uploaded:
+```
+# Secret files
+.env
+
+# Node.js default modules
+node_modules/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+```
 
 ---
 
-## Notes
-- Make sure the bot has the **Manage Roles** permission in your Discord server.
-- Roles the bot manages must be **below the bot’s highest role** in the role hierarchy.
-
----
-
-## License
-This project is licensed under the MIT License.
+## 📄 License
+This project is licensed under the MIT License - feel free to modify and use it.
