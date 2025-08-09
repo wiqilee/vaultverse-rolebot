@@ -1,0 +1,12 @@
+# Jangan upload file rahasia
+.env
+
+# Jangan upload semua library bawaan Node.js
+node_modules/
+
+# Jangan upload file log/error
+*.log
+
+# Jangan upload file sistem komputer
+.DS_Store
+Thumbs.db
