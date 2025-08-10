@@ -1,12 +1,15 @@
 # VaultVerse Role Bot
 
-A Discord bot for VaultVerse to manage custom roles and commands.
+A Discord bot for VaultVerse to manage custom roles, colors, and commands.
 
 ## 📌 Features
-- Assign custom roles to members.
-- Remove roles when conditions are not met.
+- Create and assign **custom roles** with color, optional icon, hoist, and mentionable settings.
+- **Auto-assign** the role immediately after creation to the target member.
+- **Sync nickname** (optional) so it matches the role name.
 - Deploy slash commands automatically.
 - Check token validity before running.
+- Edit or delete existing custom roles.
+- Personal `/color` command to set a user's own color role.
 
 ---
 
@@ -27,7 +30,7 @@ npm install
 ### 3. Create `.env` file
 Create a `.env` file in the root folder and add the following variables:
 ```env
-DISCORD_TOKEN=your-bot-token-here
+TOKEN=your-bot-token-here
 CLIENT_ID=your-discord-client-id
 GUILD_ID=your-discord-server-id
 ```
@@ -48,7 +51,7 @@ node index.js
 ```
 
 ### 3. Check token validity
-(Optional) You can check whether your token is valid:
+(Optional) Check if your token is valid:
 ```bash
 node check-token.js
 ```
@@ -56,7 +59,7 @@ node check-token.js
 ---
 
 ## 🛡️ .gitignore
-This project uses `.gitignore` to ensure sensitive files are not uploaded:
+This project uses `.gitignore` to keep sensitive files out of Git:
 ```
 # Secret files
 .env
@@ -75,4 +78,4 @@ Thumbs.db
 ---
 
 ## 📄 License
-This project is licensed under the MIT License - feel free to modify and use it.
+This project is licensed under the MIT License — feel free to modify and use it.
