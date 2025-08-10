@@ -1,12 +1,12 @@
-# Jangan upload file rahasia
+# Do not commit secrets
 .env
 
-# Jangan upload semua library bawaan Node.js
+# Do not commit all built-in Node libraries
 node_modules/
 
-# Jangan upload file log/error
+# Do not commit logs/errors
 *.log
 
-# Jangan upload file sistem komputer
+# Do not commit OS/system files
 .DS_Store
 Thumbs.db
