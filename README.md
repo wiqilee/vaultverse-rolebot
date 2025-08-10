@@ -5,11 +5,12 @@ A Discord bot for VaultVerse to manage custom roles, colors, and commands.
 ## 📌 Features
 - Create and assign **custom roles** with color, optional icon, hoist, and mentionable settings.
 - **Auto-assign** the role immediately after creation to the target member.
+- **Role-restricted commands** — Only specific roles (**Founder, Admin, Moderator, Supporters, Elites, Backer, Booster**) can use custom role commands.
+- **Easily deploy** slash commands to your server.
 - **Sync nickname** (optional) so it matches the role name.
-- Deploy slash commands automatically.
 - Check token validity before running.
 - Edit or delete existing custom roles.
-- Personal `/color` command to set a user's own color role.
+- Personal `/color` command to set your own name color.
 
 ---
 
@@ -55,6 +56,12 @@ node index.js
 ```bash
 node check-token.js
 ```
+
+---
+
+## 🚀 Invite the Bot
+You can invite the bot to your server using this link (replace `YOUR_CLIENT_ID` with your bot's client ID):
+[Invite VaultVerse Role Bot](https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot%20applications.commands&permissions=268435456)
 
 ---
 
